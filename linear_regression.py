@@ -13,11 +13,11 @@ class GradientDescent:
     def step(self, w, b, x, y):
         y_pred = w * x + b
 
-        # 计算梯度,m,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        # Calculate gradients
         dw = np.mean(2 * x * (y_pred - y))
         db = np.mean(2 * (y_pred - y))
 
-        # 更新参数
+        # Update parameters
         w = w - self.learning_rate * dw
         b = b - self.learning_rate * db
 
